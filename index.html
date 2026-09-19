@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ปฏิทินของเรา</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1 class="brand">ปฏิทินของเรา</h1>
+    <p class="tagline">พูดเพื่อเพิ่มนัดหมายหรืองาน</p>
+
+    <button
+      type="button"
+      id="mic-btn"
+      class="mic-btn"
+      aria-label="เริ่มหรือหยุดฟัง"
+      aria-pressed="false"
+    >
+      <span class="mic-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+          <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/>
+        </svg>
+      </span>
+    </button>
+
+    <p id="status" class="status" role="status" aria-live="polite">พร้อม</p>
+
+    <section class="panel" aria-labelledby="transcript-label">
+      <h2 id="transcript-label" class="panel-label">ข้อความที่ได้ยิน</h2>
+      <p id="transcript" class="transcript" aria-live="polite">—</p>
+    </section>
+
+    <section class="panel" aria-labelledby="reply-label">
+      <h2 id="reply-label" class="panel-label">คำตอบของระบบ</h2>
+      <p id="reply" class="reply" aria-live="polite">—</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
